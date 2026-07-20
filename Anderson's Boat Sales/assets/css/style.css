@@ -6633,11 +6633,13 @@ body.ab-noscroll {
     .ab-footer-brand {
         width: 100%;
         flex: none;
+        text-align: center;
     }
 
     .ab-footer-cols {
         flex-wrap: wrap;
         gap: 40px 60px;
+        justify-content: center;
     }
 
     .ab-footer-news-inner {
@@ -7223,6 +7225,14 @@ body.ab-noscroll {
     .fq-head {
         margin-bottom: 48px;
     }
+
+    .ab-footer-logo{
+        margin: 20px auto;
+    }
+
+    .ab-footer-about{
+        margin: 24px auto;
+    }
 }
 
 @media (max-width: 768px) {
@@ -7757,5 +7767,14 @@ body.ab-noscroll {
 
     .fq-item {
         margin-bottom: 28px;
+    }
+
+    .ab-footer-cols{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ab-footer-social{
+        justify-content: center;
     }
 }
