@@ -895,7 +895,7 @@ body.ab-noscroll {
     flex-direction: column;
     gap: 24px;
     width: 320px;
-    flex: 0 0 320px;
+    flex: 1 1 320px;
 }
 
 .ab-social-col img {
@@ -906,7 +906,7 @@ body.ab-noscroll {
 
 .ab-social-center {
     width: 600px;
-    flex: 0 0 600px;
+    flex: 1 1 600px;
 }
 
 .ab-social-center img {
