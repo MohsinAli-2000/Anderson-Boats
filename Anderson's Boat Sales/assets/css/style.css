@@ -29,7 +29,6 @@
 
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 body {
@@ -38,7 +37,6 @@ body {
     font-family: 'Gantari', sans-serif;
     color: var(--ink);
     background: #fff;
-    overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
 }
 
@@ -6371,6 +6369,10 @@ body.ab-noscroll {
     .ab-splits .ab-split-text {
         padding: 60px 100px;
     }
+
+    .ab-nav-inner{
+        padding: 0 15px;
+    }
 }
 
 @media (max-width: 1400px) {
@@ -6495,6 +6497,28 @@ body.ab-noscroll {
     .bp-share-label {
         writing-mode: horizontal-tb;
         margin: 0 6px 0 0;
+    }
+
+    .ab-nav-left{
+        gap: 16px;
+    }
+
+    .ab-nav-right{
+        gap: 16px;
+    }
+
+    .ab-nav-logo{
+        width: unset;
+        max-width: 160px;
+    }
+
+    .ab-nav-link{
+        letter-spacing: 0.2px;
+    }
+
+    .ab-phone-num{
+        font-size: 16px;
+        line-height: 18px;
     }
 }
 
