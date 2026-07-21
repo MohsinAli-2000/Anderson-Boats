@@ -104,6 +104,140 @@ $(document).ready(function () {
     /* ===== Sell/Trade FAQ accordion code ends here ===== */
 
 
+    /* ===== Employment FAQ accordion code starts here ===== */
+    if ($('.emp-faq-item').length) {
+        $('.emp-faq-q').on('click', function () {
+            var $item = $(this).closest('.emp-faq-item');
+            var isOpen = $item.hasClass('is-open');
+
+            $('.emp-faq-item').removeClass('is-open').find('.emp-faq-a').slideUp(200);
+
+            if (!isOpen) {
+                $item.addClass('is-open').find('.emp-faq-a').slideDown(200);
+            }
+        });
+
+        /* keep the pre-opened item visible on load */
+        $('.emp-faq-item.is-open').find('.emp-faq-a').show();
+    }
+    /* ===== Employment FAQ accordion code ends here ===== */
+
+
+    /* ===== Contact FAQ accordion code starts here ===== */
+    if ($('.ct-faq-item').length) {
+        $('.ct-faq-q').on('click', function () {
+            var $item = $(this).closest('.ct-faq-item');
+            var isOpen = $item.hasClass('is-open');
+
+            $('.ct-faq-item').removeClass('is-open').find('.ct-faq-a').slideUp(200);
+
+            if (!isOpen) {
+                $item.addClass('is-open').find('.ct-faq-a').slideDown(200);
+            }
+        });
+
+        /* keep the pre-opened item visible on load */
+        $('.ct-faq-item.is-open').find('.ct-faq-a').show();
+    }
+    /* ===== Contact FAQ accordion code ends here ===== */
+
+
+    /* ===== Staff FAQ accordion code starts here ===== */
+    if ($('.sf-faq-item').length) {
+        $('.sf-faq-q').on('click', function () {
+            var $item = $(this).closest('.sf-faq-item');
+            var isOpen = $item.hasClass('is-open');
+
+            $('.sf-faq-item').removeClass('is-open').find('.sf-faq-a').slideUp(200);
+
+            if (!isOpen) {
+                $item.addClass('is-open').find('.sf-faq-a').slideDown(200);
+            }
+        });
+
+        /* keep the pre-opened item visible on load */
+        $('.sf-faq-item.is-open').find('.sf-faq-a').show();
+    }
+    /* ===== Staff FAQ accordion code ends here ===== */
+
+
+    /* ===== Financing FAQ accordion code starts here ===== */
+    if ($('.fn-faq-item').length) {
+        $('.fn-faq-q').on('click', function () {
+            var $item = $(this).closest('.fn-faq-item');
+            var isOpen = $item.hasClass('is-open');
+
+            $('.fn-faq-item').removeClass('is-open').find('.fn-faq-a').slideUp(200);
+
+            if (!isOpen) {
+                $item.addClass('is-open').find('.fn-faq-a').slideDown(200);
+            }
+        });
+
+        /* keep the pre-opened item visible on load */
+        $('.fn-faq-item.is-open').find('.fn-faq-a').show();
+    }
+    /* ===== Financing FAQ accordion code ends here ===== */
+
+
+    /* ===== Parts FAQ accordion code starts here ===== */
+    if ($('.pt-faq-item').length) {
+        $('.pt-faq-q').on('click', function () {
+            var $item = $(this).closest('.pt-faq-item');
+            var isOpen = $item.hasClass('is-open');
+
+            $('.pt-faq-item').removeClass('is-open').find('.pt-faq-a').slideUp(200);
+
+            if (!isOpen) {
+                $item.addClass('is-open').find('.pt-faq-a').slideDown(200);
+            }
+        });
+
+        /* keep any pre-opened item visible on load */
+        $('.pt-faq-item.is-open').find('.pt-faq-a').show();
+    }
+    /* ===== Parts FAQ accordion code ends here ===== */
+
+
+    /* ===== Financing payment estimator code starts here ===== */
+    if ($('.fn-est').length) {
+        var $price = $('#fnPrice'), $down = $('#fnDown'), $term = $('#fnTerm'), $rate = $('#fnRate');
+
+        function money(n) {
+            return '$' + Math.round(n).toLocaleString('en-US');
+        }
+
+        function recalc() {
+            var price = +$price.val();
+            var down = Math.min(+$down.val(), price);          // down can't exceed price
+            var months = +$term.val();
+            var apr = +$rate.val();
+            var financed = Math.max(price - down, 0);
+            var r = apr / 100 / 12;
+            var payment = r === 0 ? financed / months
+                : financed * r / (1 - Math.pow(1 + r, -months));
+            var total = payment * months;
+
+            // labels inside each slider box
+            $('#fnPriceOut').text(money(price));
+            $('#fnDownOut').text(money(down));
+            $('#fnTermOut').text(months + ' months (' + (months / 12) + ' yr)');
+            $('#fnRateOut').text(apr.toFixed(2) + '% APR');
+
+            // result panel
+            $('#fnPayment').text(financed > 0 ? money(payment) : '$0');
+            $('#fnPaymentNote').text(
+                'Amount financed ' + money(financed) + ' · Total of payments ' + money(total) +
+                ' Estimate only. Excludes tax, title and registration. Not an offer of credit.'
+            );
+        }
+
+        $('.fn-est-range').on('input change', recalc);
+        recalc();
+    }
+    /* ===== Financing payment estimator code ends here ===== */
+
+
     /* ===== Sell/Trade "I want to…" toggle code starts here ===== */
     if ($('.st-toggle-btn').length) {
         $('.st-toggle-btn').on('click', function () {

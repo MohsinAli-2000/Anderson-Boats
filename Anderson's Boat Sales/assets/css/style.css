@@ -6346,6 +6346,3580 @@ body.ab-noscroll {
 }
 
 /* ============================================================
+   EMPLOYMENT PAGE  — scoped under .emp-*
+   Content column 1144px (388px margins @1920); apply band 1204px;
+   FAQ narrow band 764px. Palette Navy/Blue/Aqua + #EEFAFF, 2px radius.
+   ============================================================ */
+.emp-container {
+    max-width: 1224px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.emp-container--wide {
+    max-width: 1284px;
+}
+
+.emp-container--narrow {
+    max-width: 844px;
+}
+
+/* shared type ------------------------------------------------ */
+.emp-h2 {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 44px;
+    color: var(--navy);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.emp-h3 {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 26px;
+    color: var(--navy);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.emp-lead {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--navy);
+    opacity: .6;
+    margin: 0;
+}
+
+.emp-sub {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--navy);
+    opacity: .6;
+    margin: 16px 0 0;
+}
+
+.emp-para {
+    font-family: 'Gantari', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    margin: 0;
+}
+
+/* eyebrow (line + label) ------------------------------------- */
+.emp-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 16.8px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin: 0 0 20px;
+}
+
+.emp-eyebrow-line {
+    width: 24px;
+    height: 2px;
+    background: currentColor;
+    flex: 0 0 auto;
+}
+
+.emp-eyebrow--aqua {
+    color: #00ABE3;
+}
+
+/* buttons ---------------------------------------------------- */
+.emp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    padding: 14px 24px;
+    border: 2px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: filter .2s ease, transform .2s ease;
+}
+
+.emp-btn i {
+    font-size: 13px;
+}
+
+.emp-btn--blue {
+    background: var(--blue);
+    color: #fff;
+}
+
+.emp-btn--blue:hover {
+    color: #fff;
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
+.emp-btn--white {
+    background: #fff;
+    color: var(--navy);
+}
+
+.emp-btn--white:hover {
+    color: var(--navy);
+    transform: translateY(-1px);
+}
+
+/* text link (blue label + arrow) ---------------------------- */
+.emp-textlink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--blue);
+    transition: gap .2s ease;
+}
+
+.emp-textlink:hover {
+    color: var(--blue);
+    gap: 12px;
+}
+
+.emp-textlink i {
+    font-size: 13px;
+}
+
+/* ---- Hero ---- */
+.emp-hero {
+    position: relative;
+    min-height: 680px;
+    background: var(--navy);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.emp-hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.emp-hero-grad {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(101deg, rgba(11, 19, 61, .92) 0%, rgba(11, 19, 61, .78) 38%, rgba(11, 19, 61, .15) 78%);
+}
+
+.emp-hero-crumbs {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 0 120px;
+    font-family: 'Gantari', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, .6);
+}
+
+.emp-hero-crumbs a {
+    color: rgba(255, 255, 255, .6);
+}
+
+.emp-hero-crumbs a:hover {
+    color: #fff;
+}
+
+.emp-hero-crumbs .emp-sep {
+    margin: 0 6px;
+}
+
+.emp-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1224px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.emp-hero-content > * {
+    max-width: 720px;
+}
+
+.emp-hero-title {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 64px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.emp-hero-lead {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    margin: 24px 0 0;
+}
+
+.emp-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+/* ---- Intro: what it is like to work here ---- */
+.emp-intro {
+    padding: 100px 0;
+}
+
+.emp-intro-row {
+    display: flex;
+    align-items: stretch;
+    gap: 72px;
+}
+
+.emp-intro-copy {
+    flex: 0 0 616px;
+    max-width: 616px;
+    background: var(--light);
+    border-radius: 0 2px 2px 0;
+    padding: 56px 41px 56px 35px;
+}
+
+.emp-intro-copy .emp-lead {
+    margin-top: 24px;
+}
+
+.emp-intro-copy .emp-para {
+    margin-top: 24px;
+}
+
+.emp-intro-figure {
+    flex: 1 1 auto;
+    margin: 0;
+    align-self: center;
+}
+
+.emp-intro-img {
+    height: 342px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.emp-intro-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.emp-intro-figure figcaption {
+    margin-top: 12px;
+    font-family: 'Gantari', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+    opacity: .6;
+}
+
+/* ---- Stats band ---- */
+.emp-stats {
+    background: var(--light);
+    padding: 59px 0;
+}
+
+.emp-stats-bar {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+    background: #d4e2f2;
+    border: 1px solid #d4e2f2;
+    border-radius: 2px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, .04);
+    overflow: hidden;
+}
+
+.emp-stat {
+    background: #fff;
+    min-height: 120px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 14px;
+}
+
+.emp-stat-term {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 16.8px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--blue);
+}
+
+.emp-stat-value {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 35.2px;
+    letter-spacing: -.96px;
+    color: var(--navy);
+}
+
+/* ---- What we actually offer (6 benefit cards) ---- */
+.emp-offer {
+    padding: 100px 0;
+}
+
+.emp-offer-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+    margin-top: 52px;
+}
+
+.emp-offer-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .04);
+    overflow: hidden;
+}
+
+.emp-offer-icon {
+    height: 201px;
+    background: var(--light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.emp-offer-icon img {
+    width: auto;
+    height: 80px;
+}
+
+.emp-offer-body {
+    flex: 1 1 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.emp-offer-body .emp-para {
+    margin-top: 14px;
+}
+
+.emp-offer-body .emp-textlink {
+    margin-top: auto;
+    padding-top: 24px;
+}
+
+/* ---- Hiring now (open roles) ---- */
+.emp-hiring {
+    border-top: 1px solid var(--line);
+    padding: 94px 0 132px;
+}
+
+.emp-hiring .emp-sub {
+    max-width: 560px;
+}
+
+.emp-jobs-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.emp-job {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .04);
+    padding: 75px 20px 20px;
+}
+
+.emp-job-badge {
+    position: absolute;
+    top: 21px;
+    left: 20px;
+    display: inline-flex;
+    align-items: center;
+    height: 30px;
+    padding: 0 13px;
+    background: var(--navy);
+    color: #fff;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 16.8px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.emp-job-badge--seasonal {
+    background: var(--blue);
+}
+
+.emp-job-meta {
+    margin: 8px 0 0;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--blue);
+}
+
+.emp-job-desc {
+    margin-top: 16px;
+}
+
+.emp-job-list {
+    list-style: none;
+    margin: 24px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.emp-job-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.emp-job-check {
+    flex: 0 0 auto;
+    color: var(--blue);
+    font-size: 15px;
+    line-height: 24px;
+    margin-top: 2px;
+}
+
+.emp-job-list span {
+    font-family: 'Gantari', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+}
+
+.emp-job-apply {
+    margin-top: auto;
+    padding-top: 28px;
+}
+
+/* ---- Apply (form) ---- */
+.emp-apply {
+    background: var(--light);
+    padding: 112px 0 127px;
+}
+
+.emp-apply-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 100px;
+}
+
+.emp-apply-copy {
+    flex: 0 0 520px;
+    max-width: 520px;
+}
+
+.emp-apply-copy .emp-sub {
+    margin-top: 24px;
+}
+
+.emp-form {
+    flex: 1 1 auto;
+}
+
+.emp-form-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px 24px;
+}
+
+.emp-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.emp-field--full {
+    grid-column: 1 / -1;
+}
+
+.emp-label {
+    margin-bottom: 4px;
+    font-family: 'Gantari', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+}
+
+.emp-input {
+    height: 55px;
+    background: #fff;
+    border: 1px solid #d4e2f2;
+    border-radius: 2px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .04);
+    padding: 0 18px;
+    font-family: 'Gantari', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+}
+
+.emp-input::placeholder {
+    color: #000;
+    opacity: .6;
+}
+
+.emp-input:focus {
+    outline: none;
+    border-color: var(--blue);
+}
+
+.emp-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8' fill='none'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%23152161' stroke-width='2'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 18px center;
+    padding-right: 44px;
+    cursor: pointer;
+}
+
+.emp-textarea {
+    height: 100px;
+    padding: 16px 18px;
+    resize: vertical;
+}
+
+.emp-file {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    height: 55px;
+    background: #fff;
+    border: 1px solid #d4e2f2;
+    border-radius: 2px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, .04);
+    padding: 0 23px;
+    cursor: pointer;
+}
+
+.emp-file-btn {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--blue);
+}
+
+.emp-file-name {
+    font-family: 'Gantari', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    opacity: .6;
+}
+
+.emp-form-btn {
+    width: 100%;
+    height: 59px;
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    background: var(--blue);
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: filter .2s ease, transform .2s ease;
+}
+
+.emp-form-btn i {
+    font-size: 13px;
+}
+
+.emp-form-btn:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
+/* ---- FAQ: working here, answered ---- */
+.emp-faq {
+    padding: 100px 0 76px;
+}
+
+.emp-faq-list {
+    margin-top: 48px;
+    border-top: 1px solid var(--line);
+}
+
+.emp-faq-item {
+    border-bottom: 1px solid var(--line);
+}
+
+.emp-faq-q {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 20px 0;
+    cursor: pointer;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--navy);
+}
+
+.emp-faq-icon {
+    position: relative;
+    flex: 0 0 auto;
+    width: 14px;
+    height: 14px;
+}
+
+.emp-faq-icon::before,
+.emp-faq-icon::after {
+    content: "";
+    position: absolute;
+    background: var(--blue);
+}
+
+.emp-faq-icon::before {
+    top: 6px;
+    left: 0;
+    width: 14px;
+    height: 2px;
+}
+
+.emp-faq-icon::after {
+    top: 0;
+    left: 6px;
+    width: 2px;
+    height: 14px;
+    transition: opacity .2s ease;
+}
+
+.emp-faq-item.is-open .emp-faq-icon::after {
+    opacity: 0;
+}
+
+.emp-faq-a {
+    display: none;
+    padding: 0 0 20px;
+}
+
+.emp-faq-item.is-open .emp-faq-a {
+    display: block;
+}
+
+/* ============================================================
+   CONTACT PAGE  — scoped under .ct-*
+   Content column 1144px (388px margins @1920); FAQ narrow 764px.
+   Palette Navy/Blue/Aqua + #EEFAFF; message-form send button red.
+   ============================================================ */
+.ct-container {
+    max-width: 1224px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.ct-container--narrow {
+    max-width: 844px;
+}
+
+/* shared type ------------------------------------------------ */
+.ct-h2 {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 44px;
+    color: var(--navy);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.ct-h3 {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 26px;
+    color: var(--navy);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.ct-para {
+    font-family: 'Gantari', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    margin: 0;
+}
+
+/* eyebrow ---------------------------------------------------- */
+.ct-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 16.8px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin: 0 0 20px;
+}
+
+.ct-eyebrow-line {
+    width: 24px;
+    height: 2px;
+    background: currentColor;
+    flex: 0 0 auto;
+}
+
+.ct-eyebrow--aqua {
+    color: #00ABE3;
+}
+
+.ct-eyebrow--center {
+    justify-content: center;
+}
+
+/* buttons ---------------------------------------------------- */
+.ct-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    padding: 14px 24px;
+    border: 2px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: filter .2s ease, transform .2s ease, background .2s ease, color .2s ease;
+}
+
+.ct-btn i {
+    font-size: 13px;
+}
+
+.ct-btn--blue {
+    background: var(--blue);
+    color: #fff;
+}
+
+.ct-btn--blue:hover {
+    color: #fff;
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
+.ct-btn--navy {
+    background: var(--navy);
+    color: #fff;
+    border-radius: 4px;
+}
+
+.ct-btn--navy:hover {
+    color: #fff;
+    filter: brightness(1.18);
+    transform: translateY(-1px);
+}
+
+.ct-btn--outline {
+    background: #fff;
+    color: var(--navy);
+    border-color: var(--navy);
+    border-radius: 4px;
+}
+
+.ct-btn--outline:hover {
+    background: var(--navy);
+    color: #fff;
+}
+
+/* ---- Hero + message card ---- */
+.ct-hero {
+    position: relative;
+    min-height: 880px;
+    background: var(--navy);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.ct-hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.ct-hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: rgba(21, 33, 97, .8);
+}
+
+.ct-hero-crumbs {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 0 120px;
+    font-family: 'Gantari', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, .6);
+}
+
+.ct-hero-crumbs a {
+    color: rgba(255, 255, 255, .6);
+}
+
+.ct-hero-crumbs a:hover {
+    color: #fff;
+}
+
+.ct-hero-crumbs .ct-sep {
+    margin: 0 6px;
+}
+
+.ct-hero-inner {
+    position: relative;
+    z-index: 2;
+    max-width: 1224px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 72px;
+}
+
+.ct-hero-copy {
+    flex: 0 0 460px;
+    max-width: 460px;
+}
+
+.ct-hero-title {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 64px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.ct-hero-lead {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    margin: 24px 0 0;
+}
+
+.ct-hero-copy .ct-btn {
+    margin-top: 32px;
+}
+
+.ct-card {
+    flex: 0 0 600px;
+    width: 600px;
+    background: #fff;
+    border-radius: 2px;
+    padding: 60px 48px;
+}
+
+.ct-card-title {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 44px;
+    color: var(--navy);
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+}
+
+.ct-card-sub {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--navy);
+    opacity: .6;
+    text-align: center;
+    margin: 15px 0 0;
+}
+
+.ct-msg-form {
+    margin-top: 47px;
+}
+
+.ct-msg-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 24px;
+}
+
+.ct-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.ct-field--full {
+    grid-column: 1 / -1;
+}
+
+.ct-msg-label {
+    margin-bottom: 8px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 16.8px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--navy);
+}
+
+.ct-msg-input {
+    height: 48px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .04);
+    padding: 0 15px;
+    font-family: 'Gantari', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+}
+
+.ct-msg-input::placeholder {
+    color: #000;
+    opacity: .6;
+}
+
+.ct-msg-input:focus {
+    outline: none;
+    border-color: var(--blue);
+}
+
+.ct-msg-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8' fill='none'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%23152161' stroke-width='2'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+.ct-msg-textarea {
+    height: 96px;
+    padding: 12px 15px;
+    resize: vertical;
+}
+
+.ct-msg-btn {
+    width: 100%;
+    height: 59px;
+    margin-top: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: #c41b1a;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    font-family: 'Gantari', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    cursor: pointer;
+    transition: filter .2s ease, transform .2s ease;
+}
+
+.ct-msg-btn i {
+    font-size: 13px;
+}
+
+.ct-msg-btn:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
+/* ---- Where to find (intro panel + figure) ---- */
+.ct-find {
+    padding: 100px 0;
+}
+
+.ct-find-row {
+    display: flex;
+    align-items: stretch;
+    gap: 72px;
+}
+
+.ct-find-copy {
+    flex: 0 0 616px;
+    max-width: 616px;
+    background: var(--light);
+    border-radius: 0 2px 2px 0;
+    padding: 48px 33px 48px 35px;
+}
+
+.ct-find-copy .ct-find-para {
+    margin-top: 24px;
+}
+
+.ct-find-figure {
+    flex: 1 1 auto;
+    margin: 0;
+    align-self: center;
+}
+
+.ct-find-img {
+    height: 342px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.ct-find-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ct-find-figure figcaption {
+    margin-top: 14px;
+    font-family: 'Gantari', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+    opacity: .6;
+}
+
+/* ---- Addresses, phones and hours ---- */
+.ct-addr {
+    background: var(--light);
+    padding: 96px 0;
+}
+
+.ct-store-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 32px;
+    margin-top: 48px;
+}
+
+.ct-store {
+    background: #fff;
+    border: 1px solid #d4e2f2;
+    border-radius: 2px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .04);
+    overflow: hidden;
+}
+
+.ct-store-img {
+    height: 311px;
+    background: #ccc;
+}
+
+.ct-store-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.ct-store-body {
+    padding: 42px 33px;
+}
+
+.ct-store-body .ct-eyebrow {
+    margin-bottom: 15px;
+}
+
+.ct-store-tag {
+    margin-top: 13px;
+}
+
+.ct-store-addr {
+    margin: 24px 0 0;
+    font-family: 'Gantari', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+}
+
+.ct-store-phone {
+    display: block;
+    margin-top: 16px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--blue);
+}
+
+.ct-store-email {
+    display: block;
+    font-family: 'Gantari', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--blue);
+}
+
+.ct-hours {
+    margin-top: 36px;
+}
+
+.ct-hours-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 0;
+    border-bottom: 1px dashed #d4e2f2;
+    font-family: 'Gantari', sans-serif;
+    font-size: 16px;
+    line-height: 20px;
+    color: #000;
+}
+
+.ct-closed {
+    color: #ff2221;
+}
+
+.ct-store-note {
+    margin-top: 24px;
+    font-family: 'Gantari', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+}
+
+.ct-strong {
+    color: rgba(21, 33, 97, .8);
+}
+
+.ct-store-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 36px;
+}
+
+/* ---- Who to ask for (table) ---- */
+.ct-ask-sec {
+    padding: 100px 0;
+}
+
+.ct-ask {
+    margin-top: 48px;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.ct-ask-caption {
+    background: rgba(21, 33, 97, .9);
+    color: #fff;
+    padding: 20px;
+    font-family: 'Gantari', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.ct-ask-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.ct-ask-table th {
+    background: var(--navy);
+    color: #fff;
+    text-align: left;
+    padding: 16px 20px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 16.8px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.ct-ask-table th:nth-child(1) {
+    width: 27.1%;
+}
+
+.ct-ask-table th:nth-child(2) {
+    width: 16.7%;
+}
+
+.ct-ask-table th:nth-child(3) {
+    width: 23.05%;
+}
+
+.ct-ask-table th:nth-child(4) {
+    width: 33.15%;
+}
+
+.ct-ask-table td {
+    padding: 18px 20px;
+    border-bottom: 1px solid var(--light);
+    vertical-align: middle;
+    font-family: 'Gantari', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+}
+
+.ct-ask-table tbody tr:nth-child(even) {
+    background: var(--light);
+}
+
+.ct-ask-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.ct-ask-dept {
+    color: var(--navy);
+}
+
+.ct-ask-tel {
+    display: block;
+    color: var(--blue);
+}
+
+.ct-ask-ext {
+    display: block;
+    margin-top: 2px;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(21, 33, 97, .55);
+}
+
+.ct-ask-dash {
+    color: var(--navy);
+}
+
+/* ---- What it looks like when you pull in (gallery) ---- */
+.ct-gallery-sec {
+    border-top: 1px solid var(--line);
+    padding: 100px 0;
+}
+
+.ct-gallery-title {
+    margin-top: 0;
+}
+
+.ct-gallery-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 48px;
+}
+
+.ct-gallery-bot {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.ct-gallery-cell {
+    position: relative;
+    aspect-ratio: 1.6 / 1;
+    background: #ccc;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.ct-gallery-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---- Visiting us, answered (FAQ) ---- */
+.ct-faq {
+    background: var(--light);
+    padding: 105px 0 106px;
+}
+
+.ct-faq-list {
+    margin-top: 48px;
+    border-top: 1px solid var(--line);
+}
+
+.ct-faq-item {
+    border-bottom: 1px solid var(--line);
+}
+
+.ct-faq-q {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 20px 0;
+    cursor: pointer;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--navy);
+}
+
+.ct-faq-icon {
+    position: relative;
+    flex: 0 0 auto;
+    width: 14px;
+    height: 14px;
+}
+
+.ct-faq-icon::before,
+.ct-faq-icon::after {
+    content: "";
+    position: absolute;
+    background: var(--blue);
+}
+
+.ct-faq-icon::before {
+    top: 6px;
+    left: 0;
+    width: 14px;
+    height: 2px;
+}
+
+.ct-faq-icon::after {
+    top: 0;
+    left: 6px;
+    width: 2px;
+    height: 14px;
+    transition: opacity .2s ease;
+}
+
+.ct-faq-item.is-open .ct-faq-icon::after {
+    opacity: 0;
+}
+
+.ct-faq-a {
+    display: none;
+    padding: 0 0 20px;
+}
+
+.ct-faq-item.is-open .ct-faq-a {
+    display: block;
+}
+
+/* ============================================================
+   STAFF PAGE  — scoped under .sf-*
+   Content column 1144px (388px margins @1920); FAQ narrow 764px.
+   Palette Navy/Blue/Aqua + #EEFAFF, 2px radius.
+   ============================================================ */
+.sf-container {
+    max-width: 1224px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.sf-container--narrow {
+    max-width: 844px;
+}
+
+/* shared type ------------------------------------------------ */
+.sf-h2 {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 44px;
+    color: var(--navy);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.sf-h2--light {
+    color: #fff;
+}
+
+.sf-lead {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--navy);
+    opacity: .6;
+    margin: 0;
+}
+
+.sf-sub {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 29px;
+    color: var(--navy);
+    opacity: .6;
+    margin: 16px 0 0;
+}
+
+.sf-para {
+    font-family: 'Gantari', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    margin: 0;
+}
+
+/* eyebrow ---------------------------------------------------- */
+.sf-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 16.8px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin: 0 0 20px;
+}
+
+.sf-eyebrow-line {
+    width: 24px;
+    height: 2px;
+    background: currentColor;
+    flex: 0 0 auto;
+}
+
+.sf-eyebrow--aqua {
+    color: #00ABE3;
+}
+
+.sf-eyebrow--center {
+    justify-content: center;
+}
+
+/* buttons ---------------------------------------------------- */
+.sf-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    padding: 14px 24px;
+    border: 2px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: filter .2s ease, transform .2s ease;
+}
+
+.sf-btn i {
+    font-size: 13px;
+}
+
+.sf-btn--blue {
+    background: var(--blue);
+    color: #fff;
+}
+
+.sf-btn--blue:hover {
+    color: #fff;
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
+.sf-btn--white {
+    background: #fff;
+    color: var(--navy);
+}
+
+.sf-btn--white:hover {
+    color: var(--navy);
+    transform: translateY(-1px);
+}
+
+/* ---- Hero ---- */
+.sf-hero {
+    position: relative;
+    min-height: 680px;
+    background: var(--navy);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.sf-hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.sf-hero-grad {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(101deg, rgba(11, 19, 61, .92) 0%, rgba(11, 19, 61, .78) 38%, rgba(11, 19, 61, .15) 78%);
+}
+
+.sf-hero-crumbs {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 0 120px;
+    font-family: 'Gantari', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, .6);
+}
+
+.sf-hero-crumbs a {
+    color: rgba(255, 255, 255, .6);
+}
+
+.sf-hero-crumbs a:hover {
+    color: #fff;
+}
+
+.sf-hero-crumbs .sf-sep {
+    margin: 0 6px;
+}
+
+.sf-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1224px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.sf-hero-content > * {
+    max-width: 720px;
+}
+
+.sf-hero-title {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 64px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.sf-hero-lead {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    margin: 24px 0 0;
+}
+
+.sf-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+/* ---- Intro (who works here) ---- */
+.sf-intro {
+    padding: 100px 0;
+}
+
+.sf-intro-row {
+    display: flex;
+    align-items: stretch;
+    gap: 72px;
+}
+
+.sf-intro-copy {
+    flex: 0 0 616px;
+    max-width: 616px;
+    background: var(--light);
+    border-radius: 0 2px 2px 0;
+    padding: 60px 41px 60px 35px;
+}
+
+.sf-intro-copy .sf-lead {
+    margin-top: 24px;
+}
+
+.sf-intro-copy .sf-para {
+    margin-top: 24px;
+}
+
+.sf-intro-figure {
+    flex: 1 1 auto;
+    margin: 0;
+    align-self: center;
+}
+
+.sf-intro-img {
+    height: 342px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.sf-intro-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sf-intro-figure figcaption {
+    margin-top: 12px;
+    font-family: 'Gantari', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+    opacity: .6;
+}
+
+/* ---- Stats band (4 cells) ---- */
+.sf-stats {
+    background: var(--light);
+    padding: 89px 0;
+}
+
+.sf-stats-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: #d4e2f2;
+    border: 1px solid #d4e2f2;
+    border-radius: 2px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, .08);
+    overflow: hidden;
+}
+
+.sf-stat {
+    background: #fff;
+    min-height: 126px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 16px;
+}
+
+.sf-stat-term {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 600;
+    font-size: 11.2px;
+    line-height: 16.8px;
+    letter-spacing: 1.792px;
+    text-transform: uppercase;
+    color: #45506e;
+}
+
+.sf-stat-value {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: -.96px;
+    color: var(--navy);
+}
+
+/* ---- Team grid (14 members) ---- */
+.sf-team {
+    padding: 100px 0;
+}
+
+.sf-team-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 52px 32px;
+    margin-top: 52px;
+}
+
+.sf-member-img {
+    aspect-ratio: 262 / 320;
+    border-radius: 2px;
+    overflow: hidden;
+    background: var(--light);
+}
+
+.sf-member-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sf-member-name {
+    margin: 22px 0 0;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--navy);
+}
+
+.sf-member-role {
+    margin: 8px 0 0;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 16.8px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--blue);
+}
+
+.sf-member-bio {
+    margin: 12px 0 0;
+    font-family: 'Gantari', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+}
+
+.sf-member-loc {
+    display: block;
+    margin-top: 14px;
+    font-family: 'Gantari', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--blue);
+}
+
+.sf-member-loc:hover {
+    color: var(--blue);
+    text-decoration: underline;
+}
+
+/* ---- We ride what we sell (navy mosaic) ---- */
+.sf-ride {
+    background: var(--navy);
+    padding: 94px 0 100px;
+}
+
+.sf-ride-top {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    margin-top: 48px;
+}
+
+.sf-ride-bot {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-top: 14px;
+}
+
+.sf-ride-cell {
+    position: relative;
+    aspect-ratio: 1.6 / 1;
+    background: rgba(255, 255, 255, .06);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.sf-ride-cell img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---- FAQ ---- */
+.sf-faq {
+    padding: 95px 0 106px;
+}
+
+.sf-faq-list {
+    margin-top: 48px;
+    border-top: 1px solid var(--line);
+}
+
+.sf-faq-item {
+    border-bottom: 1px solid var(--line);
+}
+
+.sf-faq-q {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 20px 0;
+    cursor: pointer;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--navy);
+}
+
+.sf-faq-icon {
+    position: relative;
+    flex: 0 0 auto;
+    width: 14px;
+    height: 14px;
+}
+
+.sf-faq-icon::before,
+.sf-faq-icon::after {
+    content: "";
+    position: absolute;
+    background: var(--blue);
+}
+
+.sf-faq-icon::before {
+    top: 6px;
+    left: 0;
+    width: 14px;
+    height: 2px;
+}
+
+.sf-faq-icon::after {
+    top: 0;
+    left: 6px;
+    width: 2px;
+    height: 14px;
+    transition: opacity .2s ease;
+}
+
+.sf-faq-item.is-open .sf-faq-icon::after {
+    opacity: 0;
+}
+
+.sf-faq-a {
+    display: none;
+    padding: 0 0 20px;
+}
+
+.sf-faq-item.is-open .sf-faq-a {
+    display: block;
+}
+
+/* ============================================================
+   FINANCING PAGE  — scoped under .fn-*
+   Content column 1144px; FAQ/steps/apply narrow 764px.
+   Palette Navy/Blue/Aqua + #EEFAFF; estimator sliders + red CTA.
+   ============================================================ */
+.fn-container {
+    max-width: 1224px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.fn-container--narrow {
+    max-width: 844px;
+}
+
+/* shared type ------------------------------------------------ */
+.fn-h2 {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 44px;
+    color: var(--navy);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.fn-h2--light {
+    color: #fff;
+}
+
+.fn-h3 {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 26px;
+    color: var(--navy);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.fn-lead {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--navy);
+    opacity: .6;
+    margin: 0;
+}
+
+.fn-sub {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--navy);
+    opacity: .6;
+    margin: 16px 0 0;
+}
+
+.fn-para {
+    font-family: 'Gantari', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    margin: 0;
+}
+
+/* eyebrow ---------------------------------------------------- */
+.fn-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 16.8px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin: 0 0 20px;
+}
+
+.fn-eyebrow-line {
+    width: 24px;
+    height: 2px;
+    background: currentColor;
+    flex: 0 0 auto;
+}
+
+.fn-eyebrow--aqua {
+    color: #00ABE3;
+}
+
+.fn-eyebrow--center {
+    justify-content: center;
+}
+
+/* buttons ---------------------------------------------------- */
+.fn-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    padding: 14px 24px;
+    border: 2px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: filter .2s ease, transform .2s ease;
+}
+
+.fn-btn i {
+    font-size: 13px;
+}
+
+.fn-btn--blue {
+    background: var(--blue);
+    color: #fff;
+}
+
+.fn-btn--blue:hover {
+    color: #fff;
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
+.fn-btn--white {
+    background: #fff;
+    color: var(--navy);
+}
+
+.fn-btn--white:hover {
+    color: var(--navy);
+    transform: translateY(-1px);
+}
+
+.fn-textlink {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    color: var(--blue);
+    transition: gap .2s ease;
+}
+
+.fn-textlink:hover {
+    color: var(--blue);
+    gap: 12px;
+}
+
+.fn-textlink i {
+    font-size: 13px;
+}
+
+/* ---- Hero ---- */
+.fn-hero {
+    position: relative;
+    min-height: 680px;
+    background: var(--navy);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.fn-hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.fn-hero-grad {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(101deg, rgba(11, 19, 61, .92) 0%, rgba(11, 19, 61, .78) 38%, rgba(11, 19, 61, .15) 78%);
+}
+
+.fn-hero-crumbs {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 0 120px;
+    font-family: 'Gantari', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, .6);
+}
+
+.fn-hero-crumbs a {
+    color: rgba(255, 255, 255, .6);
+}
+
+.fn-hero-crumbs a:hover {
+    color: #fff;
+}
+
+.fn-hero-crumbs .fn-sep {
+    margin: 0 6px;
+}
+
+.fn-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1224px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.fn-hero-content > * {
+    max-width: 720px;
+}
+
+.fn-hero-title {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 64px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.fn-hero-lead {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    margin: 24px 0 0;
+}
+
+.fn-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 32px;
+}
+
+/* ---- Intro ---- */
+.fn-intro {
+    padding: 100px 0 80px;
+}
+
+.fn-intro-row {
+    display: flex;
+    align-items: stretch;
+    gap: 72px;
+}
+
+.fn-intro-copy {
+    flex: 0 0 616px;
+    max-width: 616px;
+    background: var(--light);
+    border-radius: 0 2px 2px 0;
+    padding: 40px 41px 40px 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.fn-intro-copy .fn-lead {
+    margin-top: 24px;
+}
+
+.fn-intro-copy .fn-para {
+    margin-top: 24px;
+}
+
+.fn-intro-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px 40px;
+    margin-top: 32px;
+}
+
+.fn-intro-figure {
+    flex: 1 1 auto;
+    margin: 0;
+    align-self: center;
+}
+
+.fn-intro-img {
+    height: 342px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.fn-intro-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fn-intro-figure figcaption {
+    margin-top: 14px;
+    font-family: 'Gantari', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #000;
+    opacity: .6;
+}
+
+/* ---- Stats band (4 cells) ---- */
+.fn-stats {
+    background: var(--light);
+    padding: 79px 0;
+}
+
+.fn-stats-bar {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: #d4e2f2;
+    border: 1px solid #d4e2f2;
+    border-radius: 2px;
+    box-shadow: 0 8px 8px rgba(0, 0, 0, .04);
+    overflow: hidden;
+}
+
+.fn-stat {
+    background: #fff;
+    min-height: 161px;
+    padding: 32px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.fn-stat-term {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 16.8px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--blue);
+}
+
+.fn-stat-value {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: -.5px;
+    color: var(--navy);
+}
+
+/* ---- Payment estimator ---- */
+.fn-est-sec {
+    padding: 100px 0;
+}
+
+.fn-est {
+    display: grid;
+    grid-template-columns: 628px 1fr;
+    margin-top: 48px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .04);
+    overflow: hidden;
+}
+
+.fn-est-controls {
+    padding: 33px;
+    display: flex;
+    flex-direction: column;
+    gap: 19px;
+}
+
+.fn-est-label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 16.8px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--navy);
+}
+
+.fn-est-slot {
+    position: relative;
+    height: 48px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .04);
+}
+
+.fn-est-out {
+    position: absolute;
+    left: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+    pointer-events: none;
+    font-family: 'Gantari', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+}
+
+.fn-est-range {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    background: transparent;
+    cursor: ew-resize;
+}
+
+.fn-est-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 8px;
+    height: 30px;
+    border-radius: 2px;
+    background: var(--blue);
+    cursor: ew-resize;
+}
+
+.fn-est-range::-moz-range-thumb {
+    width: 8px;
+    height: 30px;
+    border: none;
+    border-radius: 2px;
+    background: var(--blue);
+    cursor: ew-resize;
+}
+
+.fn-est-result {
+    background: var(--navy);
+    padding: 0 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.fn-est-result-term {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 16.8px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #00ABE3;
+}
+
+.fn-est-result-value {
+    margin-top: 14px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 64px;
+    color: #fff;
+}
+
+.fn-est-result-note {
+    margin: 44px 0 0;
+    font-family: 'Gantari', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, .7);
+}
+
+/* ---- Rate table ---- */
+.fn-rate {
+    background: var(--light);
+    border-top: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 93px 0 98px;
+}
+
+.fn-rate-sub {
+    max-width: 620px;
+}
+
+.fn-rate-box {
+    margin-top: 48px;
+    background: #fff;
+    border: 1px solid #d4e2f2;
+    border-radius: 2px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .04);
+    overflow: hidden;
+}
+
+.fn-rate-caption {
+    background: rgba(21, 33, 97, .9);
+    color: #fff;
+    padding: 20px;
+    font-family: 'Gantari', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.fn-rate-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.fn-rate-table th {
+    background: var(--navy);
+    color: #fff;
+    text-align: left;
+    padding: 16px 20px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 16.8px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+}
+
+.fn-rate-table th:nth-child(1) {
+    width: 32.3%;
+}
+
+.fn-rate-table th:nth-child(2) {
+    width: 17.96%;
+}
+
+.fn-rate-table th:nth-child(3) {
+    width: 19.16%;
+}
+
+.fn-rate-table th:nth-child(4) {
+    width: 13.78%;
+}
+
+.fn-rate-table th:nth-child(5) {
+    width: 16.8%;
+}
+
+.fn-rate-table td {
+    padding: 17px 20px;
+    border-bottom: 1px solid var(--line);
+    font-family: 'Gantari', sans-serif;
+    font-size: 15px;
+    line-height: 21px;
+    color: var(--navy);
+}
+
+.fn-rate-table tbody tr:nth-child(even) {
+    background: #fafeff;
+}
+
+.fn-rate-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.fn-rate-tier {
+    font-weight: 400;
+}
+
+.fn-rate-note {
+    margin: 20px 0 0;
+    font-family: 'Gantari', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--navy);
+    opacity: .6;
+}
+
+/* ---- Three steps ---- */
+.fn-steps {
+    padding: 100px 0;
+}
+
+.fn-steps-list {
+    margin-top: 48px;
+}
+
+.fn-step {
+    display: grid;
+    grid-template-columns: 108px 1fr;
+    align-items: start;
+    border-top: 1px solid var(--line);
+    padding: 35px 0 40px;
+}
+
+.fn-step:last-child {
+    border-bottom: 1px solid var(--line);
+}
+
+.fn-step-num {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 44px;
+    line-height: 53px;
+    color: #c5d6ea;
+}
+
+.fn-step-body .fn-para {
+    margin-top: 16px;
+}
+
+/* ---- Marine specialists ---- */
+.fn-marine {
+    background: var(--light);
+    padding: 90px 0;
+}
+
+.fn-marine-row {
+    display: flex;
+    align-items: center;
+    gap: 72px;
+}
+
+.fn-marine-img {
+    flex: 0 0 536px;
+    height: 480px;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.fn-marine-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fn-marine-copy {
+    flex: 1 1 auto;
+}
+
+.fn-marine-copy .fn-lead {
+    margin-top: 24px;
+}
+
+.fn-marine-chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 40px;
+}
+
+.fn-chip {
+    padding: 8px 18px;
+    background: #fff;
+    border: 1px solid #d4e2f2;
+    border-radius: 100px;
+    font-family: 'Gantari', sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--navy);
+}
+
+/* ---- What to have ready (full-bleed split) ---- */
+.fn-ready {
+    display: flex;
+}
+
+.fn-ready-panel {
+    flex: 1 1 50%;
+    background: var(--navy);
+    display: flex;
+    align-items: center;
+    padding: 100px 120px;
+}
+
+.fn-ready-inner {
+    max-width: 600px;
+    margin-left: auto;
+}
+
+.fn-ready-list {
+    list-style: none;
+    margin: 40px 0 0;
+    padding: 0;
+}
+
+.fn-ready-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 4px 0;
+    font-family: 'Gantari', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #fff;
+}
+
+.fn-tick {
+    width: 17px;
+    height: auto;
+    margin-top: 4px;
+    flex: 0 0 auto;
+}
+
+.fn-ready-note {
+    margin: 24px 0 0;
+    font-family: 'Gantari', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(255, 255, 255, .7);
+}
+
+.fn-ready-img {
+    flex: 1 1 50%;
+    background: #ccc;
+    min-height: 560px;
+}
+
+.fn-ready-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---- Pre-qualify form ---- */
+.fn-apply {
+    padding: 100px 0;
+}
+
+.fn-apply-sub {
+    max-width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.fn-form {
+    margin-top: 48px;
+}
+
+.fn-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.fn-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.fn-field--full {
+    grid-column: 1 / -1;
+}
+
+.fn-label {
+    margin-bottom: 9px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--navy);
+}
+
+.fn-input {
+    height: 55px;
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, .04);
+    padding: 0 16px;
+    font-family: 'Gantari', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+}
+
+.fn-input::placeholder {
+    color: #000;
+    opacity: .6;
+}
+
+.fn-input:focus {
+    outline: none;
+    border-color: var(--blue);
+}
+
+.fn-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8' fill='none'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%23152161' stroke-width='2'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+.fn-form-btn {
+    width: 100%;
+    height: 59px;
+    margin-top: 20px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 0 27px;
+    background: #c41b1a;
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: filter .2s ease, transform .2s ease;
+}
+
+.fn-form-btn i {
+    font-size: 13px;
+}
+
+.fn-form-btn:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
+.fn-form-note {
+    margin: 16px 0 0;
+    font-family: 'Gantari', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--navy);
+    opacity: .6;
+}
+
+/* ---- FAQ ---- */
+.fn-faq {
+    padding: 95px 0 100px;
+}
+
+.fn-faq-list {
+    margin-top: 48px;
+    border-top: 1px solid var(--line);
+}
+
+.fn-faq-item {
+    border-bottom: 1px solid var(--line);
+}
+
+.fn-faq-q {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 20px 0;
+    cursor: pointer;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--navy);
+}
+
+.fn-faq-icon {
+    position: relative;
+    flex: 0 0 auto;
+    width: 14px;
+    height: 14px;
+}
+
+.fn-faq-icon::before,
+.fn-faq-icon::after {
+    content: "";
+    position: absolute;
+    background: var(--blue);
+}
+
+.fn-faq-icon::before {
+    top: 6px;
+    left: 0;
+    width: 14px;
+    height: 2px;
+}
+
+.fn-faq-icon::after {
+    top: 0;
+    left: 6px;
+    width: 2px;
+    height: 14px;
+    transition: opacity .2s ease;
+}
+
+.fn-faq-item.is-open .fn-faq-icon::after {
+    opacity: 0;
+}
+
+.fn-faq-a {
+    display: none;
+    padding: 0 0 20px;
+}
+
+.fn-faq-item.is-open .fn-faq-a {
+    display: block;
+}
+
+/* ============================================================
+   PARTS SHOP PAGE  — scoped under .pt-*
+   Palette Navy/Blue/Aqua + #EEFAFF, 2px radius.
+   ============================================================ */
+.pt-container {
+    max-width: 1224px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+/* shared type ------------------------------------------------ */
+.pt-h2 {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 44px;
+    color: var(--navy);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.pt-h2--light {
+    color: #fff;
+}
+
+.pt-h3 {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 26px;
+    color: var(--navy);
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.pt-sub {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: var(--navy);
+    opacity: .6;
+    max-width: 880px;
+    margin: 16px auto 0;
+}
+
+.pt-sub--light {
+    color: rgba(255, 255, 255, .7);
+    opacity: 1;
+}
+
+.pt-para {
+    font-family: 'Gantari', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+    margin: 0;
+}
+
+/* eyebrow ---------------------------------------------------- */
+.pt-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 16.8px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--blue);
+    margin: 0 0 20px;
+}
+
+.pt-eyebrow-line {
+    width: 24px;
+    height: 2px;
+    background: currentColor;
+    flex: 0 0 auto;
+}
+
+.pt-eyebrow--aqua {
+    color: #00ABE3;
+}
+
+/* buttons ---------------------------------------------------- */
+.pt-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    padding: 14px 24px;
+    border: 2px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+    transition: filter .2s ease, transform .2s ease;
+}
+
+.pt-btn--blue {
+    background: var(--blue);
+    color: #fff;
+}
+
+.pt-btn--blue:hover {
+    color: #fff;
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
+.pt-btn--white {
+    background: #fff;
+    color: var(--navy);
+}
+
+.pt-btn--white:hover {
+    color: var(--navy);
+    transform: translateY(-1px);
+}
+
+/* ---- Hero ---- */
+.pt-hero {
+    position: relative;
+    min-height: 680px;
+    background: var(--navy);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 60px 0;
+}
+
+.pt-hero-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.pt-hero-grad {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: linear-gradient(101deg, rgba(11, 19, 61, .92) 0%, rgba(11, 19, 61, .78) 38%, rgba(11, 19, 61, .15) 78%);
+}
+
+.pt-hero-crumbs {
+    position: absolute;
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    max-width: 1680px;
+    margin: 0 auto;
+    padding: 0 120px;
+    font-family: 'Gantari', sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(255, 255, 255, .6);
+}
+
+.pt-hero-crumbs a {
+    color: rgba(255, 255, 255, .6);
+}
+
+.pt-hero-crumbs a:hover {
+    color: #fff;
+}
+
+.pt-hero-crumbs .pt-sep {
+    margin: 0 6px;
+}
+
+.pt-hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 1224px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.pt-hero-content > * {
+    max-width: 720px;
+}
+
+.pt-hero-title {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 64px;
+    line-height: 64px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0;
+}
+
+.pt-hero-lead {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: #fff;
+    margin: 24px 0 0;
+}
+
+.pt-hero-brands {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 28px;
+}
+
+.pt-hero-chip {
+    padding: 6px 15px;
+    border: 1px solid rgba(255, 255, 255, .35);
+    border-radius: 2px;
+    font-family: 'Gantari', sans-serif;
+    font-size: 13px;
+    line-height: 16px;
+    color: #fff;
+}
+
+.pt-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 28px;
+}
+
+/* ---- Stats band (navy) ---- */
+.pt-stats {
+    background: var(--navy);
+    padding: 43px 0;
+}
+
+.pt-stats-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.pt-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    padding: 6px 20px;
+}
+
+.pt-stat + .pt-stat {
+    border-left: 1px solid rgba(255, 255, 255, .15);
+}
+
+.pt-stat-value {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 40px;
+    line-height: 44px;
+    color: #fff;
+}
+
+.pt-stat-term {
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 16.8px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #00ABE3;
+}
+
+/* ---- Intro ---- */
+.pt-intro {
+    padding: 100px 0;
+}
+
+.pt-intro-wrap {
+    max-width: 1390px;
+    margin: 0 auto;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    gap: 110px;
+}
+
+.pt-intro-copy {
+    flex: 1 1 auto;
+    max-width: 600px;
+}
+
+.pt-intro-para {
+    margin-top: 24px;
+}
+
+.pt-intro-btn {
+    margin-top: 32px;
+}
+
+.pt-intro-img {
+    flex: 0 0 600px;
+    aspect-ratio: 1 / 1;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.pt-intro-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* ---- Brand grid ---- */
+.pt-brands {
+    padding: 90px 0;
+}
+
+.pt-brand-grid {
+    max-width: 1112px;
+    margin: 48px auto 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.pt-brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 67px;
+    background: #fff;
+    border: 1px solid #d4e2f2;
+    border-radius: 2px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 21px;
+    color: var(--navy);
+}
+
+/* ---- What we stock ---- */
+.pt-stock {
+    padding: 100px 0;
+}
+
+.pt-stock-wrap {
+    max-width: 1315px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.pt-stock-grid {
+    margin-top: 48px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.pt-stock-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid #d4e2f2;
+    border-radius: 2px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, .04);
+    overflow: hidden;
+}
+
+.pt-stock-img {
+    aspect-ratio: 385 / 240;
+    overflow: hidden;
+}
+
+.pt-stock-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.pt-stock-body {
+    padding: 24px;
+}
+
+.pt-stock-body .pt-para {
+    margin-top: 12px;
+}
+
+/* ---- Ordering (navy) ---- */
+.pt-ordering {
+    background: var(--navy);
+    padding: 81px 0;
+}
+
+.pt-order-grid {
+    margin-top: 52px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+}
+
+.pt-order-step {
+    text-align: center;
+}
+
+.pt-order-num {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--blue);
+    color: #fff;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.pt-order-title {
+    margin: 24px 0 0;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 24px;
+    line-height: 26px;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.pt-order-text {
+    margin: 12px auto 0;
+    max-width: 380px;
+    font-family: 'Gantari', sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    color: rgba(255, 255, 255, .7);
+}
+
+.pt-order-text a {
+    color: #00ABE3;
+}
+
+/* ---- Contact (form) ---- */
+.pt-contact {
+    background: var(--light);
+    padding: 100px 0;
+}
+
+.pt-contact-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 60px;
+}
+
+.pt-contact-copy {
+    flex: 1 1 auto;
+}
+
+.pt-contact-lead {
+    margin-top: 20px;
+    max-width: 420px;
+}
+
+.pt-callrow {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 24px 0;
+    border-top: 1px solid #d4e2f2;
+    margin-top: 24px;
+}
+
+.pt-callrow--indent {
+    padding-left: 34px;
+    margin-top: 0;
+}
+
+.pt-callrow-icon {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 auto;
+}
+
+.pt-callrow-label {
+    display: block;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 17px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--blue);
+}
+
+.pt-callrow-num {
+    display: block;
+    margin-top: 4px;
+    font-family: 'Gantari', sans-serif;
+    font-size: 16px;
+    line-height: 18px;
+    color: var(--navy);
+}
+
+.pt-form {
+    flex: 0 0 673px;
+    max-width: 673px;
+    background: #fff;
+    border-radius: 2px;
+    box-shadow: 0 20px 40px rgba(21, 33, 97, .08);
+    padding: 43px;
+}
+
+.pt-form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.pt-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.pt-field--full {
+    grid-column: 1 / -1;
+}
+
+.pt-label {
+    margin-bottom: 8px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 17px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--navy);
+}
+
+.pt-input {
+    height: 46px;
+    background: #fff;
+    border: 1px solid #d4e2f2;
+    border-radius: 2px;
+    padding: 0 16px;
+    font-family: 'Gantari', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #000;
+}
+
+.pt-input::placeholder {
+    color: #000;
+    opacity: .5;
+}
+
+.pt-input:focus {
+    outline: none;
+    border-color: var(--blue);
+}
+
+.pt-select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='8' viewBox='0 0 14 8' fill='none'%3E%3Cpath d='M1 1l6 6 6-6' stroke='%23152161' stroke-width='2'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    padding-right: 40px;
+    cursor: pointer;
+}
+
+.pt-textarea {
+    height: 90px;
+    padding: 14px 16px;
+    resize: vertical;
+}
+
+.pt-form-btn {
+    width: 100%;
+    height: 50px;
+    margin-top: 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    background: var(--blue);
+    color: #fff;
+    border: none;
+    border-radius: 2px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: filter .2s ease, transform .2s ease;
+}
+
+.pt-form-btn i {
+    font-size: 13px;
+}
+
+.pt-form-btn:hover {
+    filter: brightness(1.08);
+    transform: translateY(-1px);
+}
+
+/* ---- FAQ ---- */
+.pt-faq {
+    padding: 100px 0;
+}
+
+.pt-faq-wrap {
+    max-width: 1044px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.pt-faq-title {
+    margin-bottom: 40px;
+}
+
+.pt-faq-item {
+    border-bottom: 1px solid var(--line);
+}
+
+.pt-faq-q {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 23px 0;
+    cursor: pointer;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 24px;
+    color: var(--navy);
+}
+
+.pt-faq-icon {
+    position: relative;
+    flex: 0 0 auto;
+    width: 16px;
+    height: 16px;
+}
+
+.pt-faq-icon::before,
+.pt-faq-icon::after {
+    content: "";
+    position: absolute;
+    background: var(--blue);
+}
+
+.pt-faq-icon::before {
+    top: 7px;
+    left: 0;
+    width: 16px;
+    height: 2px;
+}
+
+.pt-faq-icon::after {
+    top: 0;
+    left: 7px;
+    width: 2px;
+    height: 16px;
+    transition: opacity .2s ease;
+}
+
+.pt-faq-item.is-open .pt-faq-icon::after {
+    opacity: 0;
+}
+
+.pt-faq-a {
+    display: none;
+    padding: 0 0 23px;
+}
+
+.pt-faq-item.is-open .pt-faq-a {
+    display: block;
+}
+
+/* ============================================================
    RESPONSIVE — all breakpoints live here, at the very bottom.
    One block per breakpoint, ordered largest -> smallest
    (max-width / desktop-first). Add new rules to the existing
@@ -6471,6 +10045,15 @@ body.ab-noscroll {
     .bl-feature-side {
         flex-basis: 40%;
     }
+
+    /* ---- EMPLOYMENT ---- */
+    .emp-offer-grid {
+        gap: 24px;
+    }
+
+    .emp-jobs-grid {
+        gap: 24px;
+    }
 }
 
 @media (max-width: 1200px) {
@@ -6519,6 +10102,26 @@ body.ab-noscroll {
     .ab-phone-num{
         font-size: 16px;
         line-height: 18px;
+    }
+
+    /* ---- EMPLOYMENT ---- */
+    .emp-offer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ---- STAFF ---- */
+    .sf-team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* ---- FINANCING ---- */
+    .fn-est {
+        grid-template-columns: 1fr 400px;
+    }
+
+    /* ---- PARTS ---- */
+    .pt-intro-wrap {
+        gap: 60px;
     }
 }
 
@@ -7233,6 +10836,297 @@ body.ab-noscroll {
     .ab-footer-about{
         margin: 24px auto;
     }
+
+    /* ---- EMPLOYMENT ---- */
+    .emp-intro,
+    .emp-offer {
+        padding: 64px 0;
+    }
+
+    .emp-hiring {
+        padding: 64px 0 64px;
+    }
+
+    .emp-apply {
+        padding: 64px 0;
+    }
+
+    .emp-faq {
+        padding: 64px 0 48px;
+    }
+
+    .emp-hero-title {
+        font-size: 44px;
+        line-height: 46px;
+    }
+
+    .emp-intro-row {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .emp-intro-copy {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 2px;
+    }
+
+    .emp-intro-figure {
+        width: 100%;
+    }
+
+    .emp-jobs-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .emp-apply-row {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .emp-apply-copy {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .emp-form {
+        width: 100%;
+    }
+
+    /* ---- CONTACT ---- */
+    .ct-find,
+    .ct-ask-sec,
+    .ct-gallery-sec,
+    .ct-addr,
+    .ct-faq {
+        padding: 64px 0;
+    }
+
+    .ct-hero {
+        min-height: 0;
+        padding: 140px 0 64px;
+    }
+
+    .ct-hero-inner {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 40px;
+    }
+
+    .ct-hero-copy {
+        flex: none;
+        max-width: 100%;
+    }
+
+    .ct-hero-title {
+        font-size: 44px;
+        line-height: 46px;
+    }
+
+    .ct-card {
+        flex: none;
+        width: 100%;
+    }
+
+    .ct-find-row {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .ct-find-copy {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 2px;
+    }
+
+    .ct-find-figure {
+        width: 100%;
+    }
+
+    .ct-store-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ct-ask {
+        overflow-x: auto;
+    }
+
+    .ct-ask-table {
+        min-width: 720px;
+    }
+
+    /* ---- STAFF ---- */
+    .sf-intro,
+    .sf-team,
+    .sf-stats,
+    .sf-ride,
+    .sf-faq {
+        padding: 64px 0;
+    }
+
+    .sf-hero-title {
+        font-size: 44px;
+        line-height: 46px;
+    }
+
+    .sf-intro-row {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .sf-intro-copy {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 2px;
+    }
+
+    .sf-intro-figure {
+        width: 100%;
+    }
+
+    .sf-stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sf-team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ---- FINANCING ---- */
+    .fn-intro,
+    .fn-est-sec,
+    .fn-steps,
+    .fn-apply,
+    .fn-faq,
+    .fn-stats,
+    .fn-rate,
+    .fn-marine {
+        padding: 64px 0;
+    }
+
+    .fn-hero-title {
+        font-size: 44px;
+        line-height: 46px;
+    }
+
+    .fn-intro-row {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .fn-intro-copy {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+        border-radius: 2px;
+    }
+
+    .fn-intro-figure {
+        width: 100%;
+    }
+
+    .fn-est {
+        grid-template-columns: 1fr;
+    }
+
+    .fn-est-result {
+        padding: 40px 32px;
+    }
+
+    .fn-rate-box {
+        overflow-x: auto;
+    }
+
+    .fn-rate-table {
+        min-width: 760px;
+    }
+
+    .fn-stats-bar {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .fn-marine-row {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .fn-marine-img {
+        flex: none;
+        width: 100%;
+        height: 360px;
+    }
+
+    .fn-ready {
+        flex-direction: column;
+    }
+
+    .fn-ready-panel {
+        padding: 56px 40px;
+    }
+
+    .fn-ready-inner {
+        max-width: 100%;
+        margin-left: 0;
+    }
+
+    .fn-ready-img {
+        min-height: 320px;
+    }
+
+    /* ---- PARTS ---- */
+    .pt-intro,
+    .pt-brands,
+    .pt-stock,
+    .pt-contact,
+    .pt-faq {
+        padding: 64px 0;
+    }
+
+    .pt-ordering {
+        padding: 56px 0;
+    }
+
+    .pt-hero-title {
+        font-size: 44px;
+        line-height: 46px;
+    }
+
+    .pt-intro-wrap {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .pt-intro-copy {
+        max-width: 100%;
+    }
+
+    .pt-intro-img {
+        flex: none;
+        width: 100%;
+    }
+
+    .pt-brand-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pt-stock-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .pt-contact-row {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .pt-form {
+        flex: none;
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 @media (max-width: 768px) {
@@ -7325,6 +11219,76 @@ body.ab-noscroll {
 
     .sv-steps-sub {
         font-size: 18px;
+    }
+
+    /* ---- EMPLOYMENT ---- */
+    .emp-offer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .emp-stats-bar {
+        grid-template-columns: 1fr;
+    }
+
+    .emp-hero-title {
+        font-size: 40px;
+        line-height: 42px;
+    }
+
+    /* ---- CONTACT ---- */
+    .ct-gallery-top,
+    .ct-gallery-bot {
+        grid-template-columns: 1fr;
+    }
+
+    .ct-hero-title {
+        font-size: 40px;
+        line-height: 42px;
+    }
+
+    /* ---- STAFF ---- */
+    .sf-ride-top,
+    .sf-ride-bot {
+        grid-template-columns: 1fr;
+    }
+
+    .sf-hero-title {
+        font-size: 40px;
+        line-height: 42px;
+    }
+
+    /* ---- FINANCING ---- */
+    .fn-stats-bar {
+        grid-template-columns: 1fr;
+    }
+
+    .fn-hero-title {
+        font-size: 40px;
+        line-height: 42px;
+    }
+
+    /* ---- PARTS ---- */
+    .pt-stock-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pt-order-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .pt-stats-inner {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .pt-stat + .pt-stat {
+        border-left: none;
+    }
+
+    .pt-hero-title {
+        font-size: 40px;
+        line-height: 42px;
     }
 }
 
@@ -7776,5 +11740,286 @@ body.ab-noscroll {
 
     .ab-footer-social{
         justify-content: center;
+    }
+
+    /* ---- EMPLOYMENT ---- */
+    .emp-intro,
+    .emp-offer,
+    .emp-hiring,
+    .emp-apply {
+        padding: 48px 0;
+    }
+
+    .emp-faq {
+        padding: 48px 0 40px;
+    }
+
+    .emp-container {
+        padding: 0 20px;
+    }
+
+    .emp-hero-crumbs {
+        padding: 0 20px;
+    }
+
+    .emp-h2 {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .emp-hero-title {
+        font-size: 30px;
+        line-height: 34px;
+    }
+
+    .emp-hero-actions {
+        width: 100%;
+    }
+
+    .emp-hero-actions .emp-btn {
+        flex: 1 1 100%;
+        justify-content: space-between;
+    }
+
+    .emp-intro-copy {
+        padding: 32px 24px;
+    }
+
+    .emp-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .emp-faq-q {
+        font-size: 16px;
+    }
+
+    /* ---- CONTACT ---- */
+    .ct-find,
+    .ct-ask-sec,
+    .ct-gallery-sec,
+    .ct-addr,
+    .ct-faq {
+        padding: 48px 0;
+    }
+
+    .ct-container {
+        padding: 0 20px;
+    }
+
+    .ct-hero-crumbs {
+        padding: 0 20px;
+    }
+
+    .ct-hero {
+        padding: 116px 0 48px;
+    }
+
+    .ct-h2,
+    .ct-card-title {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .ct-hero-title {
+        font-size: 30px;
+        line-height: 34px;
+    }
+
+    .ct-card {
+        padding: 32px 24px;
+    }
+
+    .ct-msg-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .ct-find-copy {
+        padding: 32px 24px;
+    }
+
+    .ct-store-body {
+        padding: 28px 22px;
+    }
+
+    .ct-store-actions .ct-btn {
+        flex: 1 1 100%;
+        justify-content: space-between;
+    }
+
+    .ct-faq-q {
+        font-size: 16px;
+    }
+
+    /* ---- STAFF ---- */
+    .sf-intro,
+    .sf-team,
+    .sf-stats,
+    .sf-ride,
+    .sf-faq {
+        padding: 48px 0;
+    }
+
+    .sf-container {
+        padding: 0 20px;
+    }
+
+    .sf-hero-crumbs {
+        padding: 0 20px;
+    }
+
+    .sf-h2 {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .sf-hero-title {
+        font-size: 30px;
+        line-height: 34px;
+    }
+
+    .sf-hero-actions {
+        width: 100%;
+    }
+
+    .sf-hero-actions .sf-btn {
+        flex: 1 1 100%;
+        justify-content: space-between;
+    }
+
+    .sf-intro-copy {
+        padding: 32px 24px;
+    }
+
+    .sf-stats-bar {
+        grid-template-columns: 1fr;
+    }
+
+    .sf-team-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .sf-faq-q {
+        font-size: 16px;
+    }
+
+    /* ---- FINANCING ---- */
+    .fn-intro,
+    .fn-est-sec,
+    .fn-steps,
+    .fn-apply,
+    .fn-faq,
+    .fn-stats,
+    .fn-rate,
+    .fn-marine {
+        padding: 48px 0;
+    }
+
+    .fn-container {
+        padding: 0 20px;
+    }
+
+    .fn-hero-crumbs {
+        padding: 0 20px;
+    }
+
+    .fn-h2 {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .fn-hero-title {
+        font-size: 30px;
+        line-height: 34px;
+    }
+
+    .fn-hero-actions {
+        width: 100%;
+    }
+
+    .fn-hero-actions .fn-btn {
+        flex: 1 1 100%;
+        justify-content: space-between;
+    }
+
+    .fn-intro-copy {
+        padding: 32px 24px;
+    }
+
+    .fn-est-controls {
+        padding: 24px;
+    }
+
+    .fn-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fn-step {
+        grid-template-columns: 56px 1fr;
+    }
+
+    .fn-ready-panel {
+        padding: 40px 24px;
+    }
+
+    .fn-faq-q {
+        font-size: 16px;
+    }
+
+    /* ---- PARTS ---- */
+    .pt-intro,
+    .pt-brands,
+    .pt-stock,
+    .pt-contact,
+    .pt-faq,
+    .pt-ordering {
+        padding: 48px 0;
+    }
+
+    .pt-container,
+    .pt-intro-wrap,
+    .pt-stock-wrap,
+    .pt-stats-inner,
+    .pt-faq-wrap {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .pt-hero-crumbs {
+        padding: 0 20px;
+    }
+
+    .pt-h2 {
+        font-size: 28px;
+        line-height: 32px;
+    }
+
+    .pt-hero-title {
+        font-size: 30px;
+        line-height: 34px;
+    }
+
+    .pt-hero-actions {
+        width: 100%;
+    }
+
+    .pt-hero-actions .pt-btn {
+        flex: 1 1 100%;
+    }
+
+    .pt-brand-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pt-form {
+        padding: 28px 22px;
+    }
+
+    .pt-form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pt-faq-q {
+        font-size: 17px;
     }
 }
