@@ -939,6 +939,215 @@ body.ab-noscroll {
     color: #fff;
 }
 
+/* ---- Boats Sales mega menu (Figma: Menu-Sales) ---- */
+.ab-mega {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    z-index: 1200;
+    background: #fff;
+    border-top: 1px solid var(--line);
+    box-shadow: 0 24px 40px rgba(0, 0, 0, .12);
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: opacity .2s ease, transform .2s ease, visibility .2s ease;
+}
+
+.ab-nav.mega-open .ab-mega {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.ab-mega-inner {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 120px;
+    display: flex;
+}
+
+.ab-mega-col {
+    padding: 40px 0;
+}
+
+.ab-mega-browse {
+    width: 380px;
+}
+
+.ab-mega-type {
+    width: 420px;
+    border-left: 1px solid var(--line);
+    padding-left: 80px;
+}
+
+.ab-mega-brandcol {
+    flex: 1 1 auto;
+    border-left: 1px solid var(--line);
+    padding-left: 80px;
+}
+
+.ab-mega-eyebrow {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 12px;
+    line-height: 16.8px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--blue);
+    opacity: .6;
+    margin: 0 0 28px;
+}
+
+.ab-mega-eyebrow-line {
+    width: 24px;
+    height: 2px;
+    background: currentColor;
+    flex: 0 0 auto;
+}
+
+.ab-mega-link {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 12px 0;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--navy);
+    text-transform: uppercase;
+}
+
+.ab-mega-link:hover {
+    color: var(--blue);
+}
+
+.ab-mega-ico {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 auto;
+    object-fit: contain;
+}
+
+.ab-mega-ico--arrow {
+    width: 14px;
+    height: auto;
+}
+
+.ab-mega-badge {
+    display: inline-flex;
+    align-items: center;
+    height: 24px;
+    padding: 0 10px;
+    border-radius: 12px;
+    background: var(--light);
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 0;
+    text-transform: none;
+    color: var(--blue);
+}
+
+.ab-mega-type-link {
+    display: block;
+    padding: 12px 0;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 26px;
+    color: var(--navy);
+    text-transform: uppercase;
+}
+
+.ab-mega-type-link:hover {
+    color: var(--blue);
+}
+
+.ab-mega-brands {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.ab-mega-brand {
+    position: relative;
+    aspect-ratio: 240 / 160;
+    border-radius: 4px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ab-mega-brand::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(11, 19, 61, .35);
+    transition: background .2s ease;
+}
+
+.ab-mega-brand:hover::after {
+    background: rgba(11, 19, 61, .15);
+}
+
+.ab-mega-brand img {
+    position: relative;
+    z-index: 1;
+    max-width: 120px;
+    max-height: 52px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+}
+
+.ab-mega-foot {
+    background: var(--light);
+}
+
+.ab-mega-foot-inner {
+    max-width: 1920px;
+    margin: 0 auto;
+    padding: 0 120px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+}
+
+.ab-mega-foot-text {
+    font-family: 'Gantari', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--navy);
+}
+
+.ab-mega-foot-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Parkinsans', sans-serif;
+    font-weight: 800;
+    font-size: 14px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: var(--blue);
+}
+
+.ab-mega-foot-link img {
+    width: 13px;
+    height: auto;
+}
+
 /* ============================================================
    11. FOOTER
    ============================================================ */
@@ -11068,6 +11277,26 @@ body.ab-noscroll {
 }
 
 @media (max-width: 1200px) {
+    /* ---- MEGA MENU ---- */
+    .ab-mega-inner,
+    .ab-mega-foot-inner {
+        padding-left: 64px;
+        padding-right: 64px;
+    }
+
+    .ab-mega-browse {
+        width: 280px;
+    }
+
+    .ab-mega-type {
+        width: 260px;
+        padding-left: 48px;
+    }
+
+    .ab-mega-brandcol {
+        padding-left: 48px;
+    }
+
     /* ---- BLOG POST ---- */
     .bp-crumbs {
         padding: 0 64px;
@@ -11182,6 +11411,11 @@ body.ab-noscroll {
     /* collapse nav: logo left, hamburger right */
     .ab-nav-left,
     .ab-nav-phone {
+        display: none;
+    }
+
+    /* Boats Sales trigger is hidden on mobile, so hide its panel too */
+    .ab-mega {
         display: none;
     }
 

@@ -46,20 +46,35 @@ $(document).ready(function () {
     /* ===== MORE menu panel code ends here ===== */
 
 
-    /* ===== Boats Sales caret toggle code starts here ===== */
+    /* ===== Boats Sales mega menu toggle code starts here ===== */
     if ($('.toggleBoatsMenu').length) {
+        function closeBoatsMega() {
+            $('.toggleBoatsMenu').removeClass('is-open').attr('aria-expanded', 'false');
+            $('.ab-nav').removeClass('mega-open');
+            $('.ab-mega').attr('aria-hidden', 'true');
+        }
+
         $('.toggleBoatsMenu').on('click', function (e) {
             e.stopPropagation();
             $(this).toggleClass('is-open');
             var expanded = $(this).hasClass('is-open');
             $(this).attr('aria-expanded', expanded ? 'true' : 'false');
+            $('.ab-nav').toggleClass('mega-open', expanded);
+            $('.ab-mega').attr('aria-hidden', expanded ? 'false' : 'true');
         });
 
-        $(document).on('click', function () {
-            $('.toggleBoatsMenu').removeClass('is-open').attr('aria-expanded', 'false');
+        /* keep the panel open when interacting inside it */
+        $('.ab-mega').on('click', function (e) {
+            e.stopPropagation();
+        });
+
+        /* close on outside click or Escape */
+        $(document).on('click', closeBoatsMega);
+        $(document).on('keydown', function (e) {
+            if (e.key === 'Escape') closeBoatsMega();
         });
     }
-    /* ===== Boats Sales caret toggle code ends here ===== */
+    /* ===== Boats Sales mega menu toggle code ends here ===== */
 
 
     /* ===== About FAQ accordion code starts here ===== */
