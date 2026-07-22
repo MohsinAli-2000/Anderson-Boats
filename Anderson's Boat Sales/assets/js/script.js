@@ -199,6 +199,19 @@ $(document).ready(function () {
     /* ===== Parts FAQ accordion code ends here ===== */
 
 
+    /* ===== Brands (Godfrey) FAQ accordion code starts here ===== */
+    if ($('.br-faq-item').length) {
+        /* only items marked is-open start expanded; each toggles independently */
+        $('.br-faq-item.is-open').find('.br-faq-a').show();
+        $('.br-faq-q').on('click', function () {
+            var $item = $(this).closest('.br-faq-item');
+            $item.toggleClass('is-open');
+            $item.find('.br-faq-a').slideToggle(200);
+        });
+    }
+    /* ===== Brands (Godfrey) FAQ accordion code ends here ===== */
+
+
     /* ===== Financing payment estimator code starts here ===== */
     if ($('.fn-est').length) {
         var $price = $('#fnPrice'), $down = $('#fnDown'), $term = $('#fnTerm'), $rate = $('#fnRate');
