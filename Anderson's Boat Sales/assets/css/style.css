@@ -11259,6 +11259,89 @@ body.ab-noscroll {
     max-width: 800px;
 }
 
+
+#contactModal_email .modal-header {
+    border-bottom: 0;
+    padding-top: 30px;
+}
+
+#contactModal_email .modal-dialog {
+    max-width: 450px;
+}
+
+.popup_input {
+    width: calc(100% - 100px);
+    height: 43px;
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #dedfe0;
+    margin-bottom: 0;
+    padding: 0 10px 0 10px
+}
+
+.shareModalHeading {
+    font-size: 20px;
+    line-height: 24px;
+    text-transform: uppercase;
+    color: #1a1a1a;
+    font-weight: 300;
+}
+
+.copyShareLinkBtn {
+    text-align: center;
+    background: #1a1a1a;
+    border: 1px solid transparent;
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 10px 30px;
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 0.8px;
+    font-weight: 200;
+    transition: 0.4s ease all;
+    border: none;
+    outline: none;
+}
+
+.copyLinkWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.shareIconsContainer {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+}
+
+.shareIconsWrapper {
+    margin-top: 40px;
+}
+
+.shareIconsContainer .fa-brands {
+    color: #1a1a1a;
+}
+
+.shareIcons {
+    border: 1px solid #000;
+    border-radius: 50%;
+    background-color: #fff;
+    height: 50px;
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.desktopShareBtn {
+    display: block;
+}
+
+.mobileShareBtn {
+    display: none;
+}
+
 /* ============================================================
    RESPONSIVE — all breakpoints live here, at the very bottom.
    One block per breakpoint, ordered largest -> smallest
@@ -12635,6 +12718,10 @@ body.ab-noscroll {
 
     .br-feat-grid {
         grid-template-columns: 1fr;
+    }
+
+    .mobileShareBtn {
+        display: block;
     }
 }
 
