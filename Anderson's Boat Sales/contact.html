@@ -142,32 +142,84 @@
     </header>
 
     <!-- ======= MORE menu (Figma: Menu-More) ======= -->
-    <div class="ab-drawer-overlay"></div>
+        <div class="ab-drawer-overlay"></div>
     <aside class="ab-drawer" aria-hidden="true">
-        <button type="button" class="ab-drawer-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+        <div class="ab-drawer-head">
+            <a href="./home.html" class="ab-drawer-logo">
+                <img src="./assets/images/home/andersonboats-logo 1.png" alt="Anderson's Boat Sales">
+            </a>
+            <button type="button" class="ab-drawer-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+        </div>
 
-        <nav class="ab-more-primary">
-            <a href="javascript:void(0)">Events</a>
-            <a href="./about.html">About Us</a>
-            <a href="javascript:void(0)">Staff</a>
-            <a href="./contact.html">Contact<br>&amp; Locations</a>
-        </nav>
+        <!-- Desktop MORE panel (secondary links) -->
+        <div class="ab-drawer-desktop">
+            <nav class="ab-more-primary">
+                <a href="./events.html">Events</a>
+                <a href="./about.html">About Us</a>
+                <a href="./staff.html">Staff</a>
+                <a href="./contact.html">Contact<br>&amp; Locations</a>
+            </nav>
 
-        <nav class="ab-more-secondary">
-            <a href="javascript:void(0)">Boating Blog</a>
-            <a href="./employment.html">Employment</a>
-            <a href="javascript:void(0)">Testimonials</a>
-            <a href="javascript:void(0)">FAQ</a>
-        </nav>
+            <nav class="ab-more-secondary">
+                <a href="./blog.html">Boating Blog</a>
+                <a href="./employment.html">Employment</a>
+                <a href="./testimonials.html">Testimonials</a>
+                <a href="./faq.html">FAQ</a>
+            </nav>
+        </div>
 
-        <!-- mobile only: header hides these below 992px -->
-        <nav class="ab-more-mobile">
-            <a href="javascript:void(0)">Boats Sales</a>
-            <a href="./service.html">Service</a>
-            <a href="javascript:void(0)">Parts Shop</a>
-            <a href="./sell-trade.html">Sell or Trade</a>
-            <a href="tel:2486669922" class="ab-more-tel">248.666.9922</a>
-            <a href="tel:5868464944" class="ab-more-tel">586.846.4944</a>
+        <!-- Mobile full menu -->
+        <nav class="ab-mmenu">
+            <div class="ab-mmenu-group">
+                <button type="button" class="ab-mmenu-toggle toggleMobileSales" aria-expanded="false">
+                    <span>Boats Sales</span>
+                    <i class="fa-solid fa-chevron-down ab-mmenu-caret"></i>
+                </button>
+                <div class="ab-mmenu-panel">
+                    <span class="ab-mmenu-label">Browse</span>
+                    <a href="javascript:void(0)">All Inventory <span class="ab-mmenu-badge">200+</span></a>
+                    <a href="javascript:void(0)">New Boats</a>
+                    <a href="javascript:void(0)">Pre-Owned Boats</a>
+                    <a href="./sell-trade.html">Sell / Trade Your Boat</a>
+                    <a href="./financing.html">Get Financing</a>
+                    <span class="ab-mmenu-label">Shop by Type</span>
+                    <a href="javascript:void(0)">Wake / Surf / Ski</a>
+                    <a href="javascript:void(0)">Bowrider</a>
+                    <a href="javascript:void(0)">Yacht</a>
+                    <a href="./brands.html">Pontoon</a>
+                    <a href="javascript:void(0)">Center Console</a>
+                    <span class="ab-mmenu-label">Shop by Brand</span>
+                    <a href="javascript:void(0)">Moomba</a>
+                    <a href="javascript:void(0)">Supra</a>
+                    <a href="javascript:void(0)">Regal</a>
+                    <a href="./brands.html">Godfrey</a>
+                    <a href="javascript:void(0)">Tahoe</a>
+                    <a href="javascript:void(0)">Key West</a>
+                </div>
+            </div>
+            <a class="ab-mmenu-item" href="./service.html">Service</a>
+            <a class="ab-mmenu-item" href="./parts.html">Parts Shop</a>
+            <a class="ab-mmenu-item" href="./sell-trade.html">Sell or Trade</a>
+            <a class="ab-mmenu-item" href="./financing.html">Financing</a>
+            <a class="ab-mmenu-item" href="./events.html">Events</a>
+            <a class="ab-mmenu-item" href="./about.html">About Us</a>
+            <a class="ab-mmenu-item" href="./staff.html">Staff</a>
+            <a class="ab-mmenu-item" href="./employment.html">Employment</a>
+            <a class="ab-mmenu-item" href="./blog.html">Boating Blog</a>
+            <a class="ab-mmenu-item" href="./testimonials.html">Testimonials</a>
+            <a class="ab-mmenu-item" href="./faq.html">FAQ</a>
+            <a class="ab-mmenu-item" href="./contact.html">Contact &amp; Locations</a>
+
+            <div class="ab-mmenu-foot">
+                <a class="ab-mmenu-call" href="tel:2486669922">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>248.666.9922<small>Waterford, MI</small></span>
+                </a>
+                <a class="ab-mmenu-call" href="tel:5868464944">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>586.846.4944<small>Harrison Township, MI</small></span>
+                </a>
+            </div>
         </nav>
     </aside>
 

@@ -28,6 +28,16 @@ $(document).ready(function () {
 
         $('.ab-drawer-close, .ab-drawer-overlay').on('click', closeDrawer);
 
+        // Boats Sales accordion inside the mobile menu (inventory mega menu)
+        $('.toggleMobileSales').on('click', function (e) {
+            e.stopPropagation();
+            var $group = $(this).closest('.ab-mmenu-group');
+            var open = !$group.hasClass('is-open');
+            $group.toggleClass('is-open', open);
+            $(this).attr('aria-expanded', open ? 'true' : 'false');
+            $group.find('.ab-mmenu-panel').slideToggle(220);
+        });
+
         // close after tapping a real destination link
         $drawer.on('click', 'a[href]', function () {
             closeDrawer();
